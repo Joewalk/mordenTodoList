@@ -40,7 +40,7 @@ addBtn.addEventListener("click", e => {
     } else {
       todos = JSON.parse(localStorage.getItem("todos"));
     }
-    todos.push(todo);
+    todos.unshift(todo);
 
     localStorage.setItem("todos", JSON.stringify(todos));
     // emptys the input field after todo is added
