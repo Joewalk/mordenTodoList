@@ -1,3 +1,7 @@
+.container {
+  width: 30%;
+}
+
 .remove {
   font-weight: bold;
 }
@@ -45,4 +49,10 @@
   color: #09ad7e;
   transition: ease 0.2s;
   font-family: "Lucida Sans Unicode", "Arial Unicode MS", Arial;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
 }
