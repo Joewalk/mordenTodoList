@@ -1,0 +1,48 @@
+.remove {
+  font-weight: bold;
+}
+.remove:hover {
+  text-decoration: none;
+}
+/* A toggled state! No JavaScript! */
+.completed:checked ~ #item {
+  text-decoration: line-through;
+  color: #09ad7e;
+}
+/* Base for label styling */
+[type="checkbox"] {
+  position: absolute;
+  top: 0.4em;
+  left: 1.42em;
+  z-index: 9999;
+  cursor: pointer;
+}
+[type="checkbox"] + label {
+  padding-left: 1.95em;
+}
+
+[type="checkbox"]:after {
+  content: "";
+  position: absolute;
+  font-size: 1.2em;
+  left: 0;
+  top: 0;
+  width: 1em;
+  height: 1em;
+  border: 2px solid #ccc;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.completed:checked:after {
+  content: "\2713\0020";
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1.2em;
+  line-height: 1;
+  color: #09ad7e;
+  transition: ease 0.2s;
+  font-family: "Lucida Sans Unicode", "Arial Unicode MS", Arial;
+}
